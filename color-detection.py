@@ -49,20 +49,11 @@ while(1):
 
     cv2.imshow("Color Detector",testImage)
     if (clicked):
-   
-        
         cv2.rectangle(testImage,(20,20), (750,60), (b,g,r), -1)
-
-        
         displayText = getColorName(r,g,b) + ' R='+ str(r) +  ' G='+ str(g) +  ' B='+ str(b)
-        
-        
         cv2.putText(testImage, displayText,(50,50),2,0.8,(255,255,255),2,cv2.LINE_AA)
-
-        
         if(r+g+b>=600):
             cv2.putText(testImage, displayText,(50,50),2,0.8,(0,0,0),2,cv2.LINE_AA)
-            
         clicked=False
 
     #Break the loop when user hits 'esc' key    
